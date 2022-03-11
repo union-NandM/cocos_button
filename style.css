@@ -1,23 +1,46 @@
-@keyframes anime {
+@keyframes anime_circle {
   0% {
     top: -40px;
     width: 30px;
     height: 30px;
   }
-
+  10% {
+    top: -40px;
+    width: 30px;
+    height: 30px;
+  }
+  20% {
+    top: 50%;
+    width: 30px;
+    height: 30px;
+  }
   30% {
     top: 50%;
     width: 30px;
     height: 30px;
   }
-
-  40% {
+  50% {
     top: 50%;
-    width: 30px;
-    height: 30px;
+    width: 300px;
+    height: 300px;
   }
   100% {
     top: 50%;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@keyframes anime_mask {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  80% {
+    width: 0;
+    height: 0;
+  }
+  100% {
     width: 300px;
     height: 300px;
   }
@@ -57,7 +80,19 @@ body {
   top: -40px;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: anime 1s linear infinite;
+  animation: anime_circle 2s linear infinite;
+}
+
+.mask {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: darkred;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: anime_mask 2s linear infinite;
 }
 
 .text {
